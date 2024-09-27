@@ -1,0 +1,230 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding-left: 4%;
+    width: 35%;
+}
+
+.hero-content button,
+#about-content button {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    background-color: #292929;
+}
+
+
+.hero-image {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(131.9deg, rgba(30, 168, 209, 0) 20.6%, rgba(30, 168, 209, 0.5) 90.87%);
+    border-radius: 1400px 0px 0px 0px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    align-self: flex-end;
+}
+
+#about-section {
+  padding-left: 4%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  margin-bottom: 200px;
+}
+
+
+.about-images-container {
+  display: flex;
+  gap: 2%;
+  height: 100%;
+}
+
+.about-images-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-images-column-center {
+  height: 80%;
+  justify-content: center;
+}
+
+.about-image {
+  object-fit: cover;
+  height: 49%;
+  width: 100%;
+}
+
+
+.about-image-large {
+  height: 80%;
+}
+
+
+.about-bulletpoints {
+  display: flex;
+  gap: 20%;
+  margin-bottom: 50px;
+}
+
+.bulletpoint svg {
+  background-color: #1B529E;
+  border-radius: 50%;
+  padding: 1px;
+}
+
+.bulletpoint {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#services-section {
+  background-color: #E7F1FF;
+  padding: 50px 4%;
+}
+
+#service-card {
+  background-color: white;
+  padding: 20px;
+
+}
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(28% - 14px); /* Reduced from 33.33% to 31% */
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.service-card h2 {
+  margin-bottom: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.service-card p {
+  color: #606060;
+}
+
+.doctors-section {
+  position: relative;
+  padding: 0 40px;
+}
+
+.doctors-carousel {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  gap: 20px;
+  padding: 20px 0;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  -webkit-overflow-scrolling: touch; /* For smoother mobile scrolling */
+}
+
+.doctors-carousel::-webkit-scrollbar {
+  height: 8px;
+  justify-content: flex-start; /* This ensures items align to the start */
+
+}
+
+.doctors-carousel::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.doctor-card {
+  flex: 0 0 auto;
+  width: 262px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 15px;
+  display: inline-block;
+  scroll-snap-align: start; /* Makes each card snap to the start when scrolling */
+
+}
+
+.doctor-image {
+  width: 262px;
+  height: 262px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.doctor-card h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.doctor-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.scroll-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.scroll-button.left {
+  left: 10px;
+}
+
+.scroll-button.right {
+  right: 10px;
+}
