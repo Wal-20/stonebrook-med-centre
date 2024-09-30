@@ -23,7 +23,7 @@ const BookAppointment = () => {
   return (
     <div>
         <Navbar/>
-       <ShortHero/>
+       <ShortHero header={"Book Your Appointment"} subtext={"Schedule a convenient time for your visit with our experienced medical team."}/>
         <div className="form-header">
             <h1 style={{fontFamily: "Oswald"}}>Enter Your Details</h1>
             <p>Provide basic information so we can confirm your appointment.</p>

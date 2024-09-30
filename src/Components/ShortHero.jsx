@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/css/shortHero.css";
 
-const ShortHero = () => {
+const ShortHero = ({header, subtext}) => {
   return (
     <div className="short-hero">
       <div className="gradient-background left-gradient">
@@ -20,10 +20,9 @@ const ShortHero = () => {
         </div>
       </div>
       <div className="short-hero-header">
-        <h1 style={{ fontFamily: "Oswald" }}>Book an Appointment</h1>
+        <h1 style={{ fontFamily: "Oswald" }}>{header}</h1>
         <h3 style={{ fontWeight: "400" }}>
-          Schedule a convenient time for your visit with our experienced medical
-          team.
+{subtext}
         </h3>
       </div>
       <div className="gradient-background right-gradient">

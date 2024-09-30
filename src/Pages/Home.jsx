@@ -38,14 +38,14 @@ const Home = () => {
             </div>
             <div className="hero-image">
                 <div className="sticky-note" style={{background: '#B1D9F5', marginTop: '40%', borderRadius: '20px', padding: '10px'}}>
-                    <h4>Pediatric Care</h4>
-                    <p>Specialized healthcare for children, ensuring a healthy start.</p>
+                    <h4>Family Practice</h4>
+                    <p>Comprehensive care for all ages, from kids to seniors.</p>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1B529E"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
                 </div>
                 <img src={heroImage} alt="Hero" />
                 <div className="sticky-note" style={{background: '#B2EBE0', marginBottom: '40%', borderRadius: '20px', padding: '10px'}}>
-                    <h4>Pediatric Care</h4>
-                    <p>Specialized healthcare for children, ensuring a healthy start.</p>
+                    <h4>Walk-In Clinic</h4>
+                    <p>No appointment needed. Immediate care for urgent needs.</p>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1B529E"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
                 </div>
             </div>

@@ -8,7 +8,7 @@ const PatientRegistration = () => {
   return (
     <div>
       <Navbar/>
-      <ShortHero/>
+      <ShortHero header={"New Patient Registration"} subtext={"Please fill out the form below to help us provide the best care for you."}/>
         <div className="form-header">
             <h1 style={{fontFamily: "Oswald"}}>Complete Your Details Below</h1>
             <p>This information helps us prepare for your visit and offer you the best possible care.</p>
