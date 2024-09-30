@@ -1,6 +1,10 @@
 .hero-section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* overflow: hidden; */
+    padding-left: 5%;
 }
 
 .hero-content {
@@ -9,7 +13,16 @@
     align-items: left;
     justify-content: center;
     padding-left: 4%;
-    width: 35%;
+    width: 40%;
+    z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 80px;
+}
+
+.hero-content p {
+  font-size: 20px;
 }
 
 .hero-content button,
@@ -25,34 +38,47 @@
 
 
 .hero-image {
-    height: 100vh;
+    width: 60%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 93vh;
     background: linear-gradient(131.9deg, rgba(30, 168, 209, 0) 20.6%, rgba(30, 168, 209, 0.5) 90.87%);
     border-radius: 1400px 0px 0px 0px;
 }
 
 .hero-image img {
     width: 100%;
-    height: 90%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     align-self: flex-end;
+    position: relative;
+    z-index: 2;
 }
 
 #about-section {
   padding-left: 4%;
   margin-top: 100px;
   display: flex;
-  justify-content: space-between;
-  gap: 5%;
+  /* justify-content: flex-start; */
+  /* gap: 5%; */
   margin-bottom: 200px;
+  height: 100vh;
 }
 
+#about-content {
+  margin-left: 50px;
+  width: 60%;
+}
+
+.about-images {
+  width: 40%;
+}
 
 .about-images-container {
   display: flex;
-  gap: 2%;
+  gap: 5%;
   height: 100%;
 }
 
@@ -63,7 +89,7 @@
 }
 
 .about-images-column-center {
-  height: 80%;
+  /* height: 80%; */
   justify-content: center;
 }
 
@@ -71,6 +97,7 @@
   object-fit: cover;
   height: 49%;
   width: 100%;
+  border-radius: 10px;
 }
 
 
@@ -82,7 +109,7 @@
 .about-bulletpoints {
   display: flex;
   gap: 20%;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .bulletpoint svg {
@@ -102,41 +129,37 @@
   padding: 50px 4%;
 }
 
-#service-card {
-  background-color: white;
-  padding: 20px;
-
-}
-
 .services-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-}
-
-.services-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
 }
 
 .service-card {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  width: calc(28% - 14px); /* Reduced from 33.33% to 31% */
+  cursor: pointer;
+  margin: 20px 0;
+  box-shadow: 0;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
 .service-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 200px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
   border-radius: 5px;
   margin-bottom: 15px;
 }
 
 .service-card h2 {
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -144,87 +167,243 @@
   color: #606060;
 }
 
-.doctors-section {
-  position: relative;
-  padding: 0 40px;
-}
 
-.doctors-carousel {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  gap: 20px;
-  padding: 20px 0;
-  max-width: 100%;
-  margin: 0 auto;
-  justify-content: center;
-  scroll-behavior: smooth; /* Enables smooth scrolling */
-  -webkit-overflow-scrolling: touch; /* For smoother mobile scrolling */
-}
-
-.doctors-carousel::-webkit-scrollbar {
-  height: 8px;
-  justify-content: flex-start; /* This ensures items align to the start */
-
-}
-
-.doctors-carousel::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-}
-
-.doctor-card {
-  flex: 0 0 auto;
-  width: 262px;
-  text-align: center;
-  border-radius: 8px;
-  padding: 15px;
-  display: inline-block;
-  scroll-snap-align: start; /* Makes each card snap to the start when scrolling */
-
-}
-
-.doctor-image {
-  width: 262px;
-  height: 262px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.doctor-card h3 {
-  margin: 0 0 5px;
-  font-size: 18px;
-}
-
-.doctor-card p {
-  margin: 0;
-  font-size: 14px;
-  color: #666;
-}
-
-.scroll-button {
+.hero-image .sticky-note {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.1);
+  border-radius: 20px;
+  overflow-y: auto;
+  z-index: 3;
+}
+
+.sticky-note-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky-note p {
+  max-width: 100%;
+  margin-bottom: auto;
+}
+
+.sticky-note svg {
+  align-self: flex-end;
+  background-color: white;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 1;
+  padding: 4px;
+  box-sizing: content-box;
+  margin-top: auto;
 }
 
-.scroll-button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+.hero-image {
+  width: 40%; /* Adjust this value to balance with the sticky notes */
+  height: auto;
+  object-fit: contain;
 }
 
-.scroll-button.left {
-  left: 10px;
+.sticky-note-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.scroll-button.right {
-  right: 10px;
+.sticky-note p {
+  max-width: 100%;
+  margin-bottom: auto;
+}
+
+.sticky-note svg {
+  align-self: flex-end;
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+  box-sizing: content-box;
+  margin-top: auto;
+}
+
+
+
+/* Tablet and Mobile styles */
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .hero-content {
+        width: 80%;
+        padding: 20px 4%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 48px; /* Reduced from 80px */
+    }
+
+    .hero-content p {
+        font-size: 18px; /* Slightly reduced from 20px */
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      background: none; /* Remove gradient background */
+      border-radius: 0;
+      display: flex;
+      flex-direction: row; /* Change to row for sticky notes */
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      gap: 20px; /* Add gap between sticky notes */
+    }
+
+    .hero-image img {
+        display: none; /* Hide the image */
+    }
+
+    .hero-image .sticky-note {
+        position: static; /* Remove absolute positioning */
+        width: 40%;
+        height: auto;
+        max-width: 200px; /* Limit maximum width */
+    }
+
+    .hero-image .sticky-note:first-of-type,
+    .hero-image .sticky-note:last-of-type {
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin: 0;
+    }
+  
+
+    #about-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #about-content {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .about-images-container {
+      display: none;
+    }
+
+    .services-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .service-card {
+        width: calc(33.33% - 14px); /* Adjust for 3 cards per row on larger tablets */
+        padding: 15px;
+    }
+
+    .service-image {
+        height: 160px; /* Reduce image height */
+    }
+
+    .service-card h2 {
+        font-size: 18px;
+        margin: 8px 0;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+
+    #services-section h2 {
+        font-size: 36px; /* Reduced from 48px */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 45px; /* Further reduced for mobile */
+    }
+
+    .hero-content p {
+        font-size: 16px; /* Further reduced for mobile */
+    }
+
+    .hero-image .sticky-note {
+      width: 35%;
+      height: auto;
+      max-width: 200px; /* Limit maximum width */
+  }
+
+  .hero-image .sticky-note h4 {
+    margin: 0;
+    margin-top: 1%;
+  }
+
+  .hero-image .sticky-note svg {
+    margin-top: 1%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero-image .sticky-note p {
+    font-size: 12px;
+  }
+
+
+    .hero-content button,
+    #about-content button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .about-bulletpoints {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-card {
+        width: calc(50% - 10px); /* 2 cards per row on smaller tablets and larger phones */
+    }
+
+    .service-image {
+        height: 140px; /* Further reduce image height for mobile */
+    }
+
+    .service-card h2 {
+        font-size: 16px;
+    }
+
+    .service-card p {
+        font-size: 12px;
+    }
+
+    #services-section h2 {
+        font-size: 28px; /* Further reduced for mobile */
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-card * {
+      width: 80%;
+    }
+    .service-image {
+        height: 180px; /* Slightly larger image for full-width cards */
+        width: 100%;
+    }
 }

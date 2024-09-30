@@ -81,14 +81,15 @@
 }
 
 .footer-section-title {
-    font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
     font-family: 'Oswald', Times, serif;
 }
 
 .footer-subtext {
     display: block;
     color: #FAFAFA;
+    text-align: center;
     font-weight: 200;
     text-decoration: none;
     margin-bottom: 10px;
@@ -135,10 +136,10 @@
     }
 
     .footer-section-title {
-        font-size: 1em;
+        font-size: 1.5em;
     }
 
     .footer-subtext {
-        font-size: 0.8em;
+        font-size: .9em;
     }
 }

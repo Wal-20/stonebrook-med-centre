@@ -110,7 +110,7 @@ const Navbar = ({ transparent = false }) => {
             </div>
           </div>
         )}
-        <div className='navbar-link' style={{color: transparent && !isMobile ? 'white' : 'black'}} onClick={() => handleLinkClick("/gallery")}>New Patient Form</div>
+        <div className='navbar-link' style={{color: transparent && !isMobile ? 'white' : 'black'}} onClick={() => handleLinkClick("/register")}>New Patient Form</div>
 
         <div className='navbar-link' style={{color: transparent && !isMobile ? 'white' : 'black'}} onClick={() => handleLinkClick("/contact")}>Contact Us</div>
         <div className='navbar-link' style={{
@@ -118,7 +118,7 @@ const Navbar = ({ transparent = false }) => {
           backgroundColor: '#292929',
           padding: '12px 20px',
           borderRadius: '50px'
-        }} onClick={() => handleLinkClick("/book")}>Book Appointment</div>
+        }} onClick={() => handleLinkClick("/book-appointment")}>Book Appointment</div>
       </div>
     </div>
   )

@@ -35,7 +35,17 @@ const Home = () => {
                 <button>Book an Appointment</button>
             </div>
             <div className="hero-image">
+                <div className="sticky-note" style={{background: '#B1D9F5'}}>
+                    <h4>Pediatric Care</h4>
+                    <p>Specialized healthcare for children, ensuring a healthy start.</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1B529E"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
+                </div>
                 <img src={heroImage} alt="Hero" />
+                <div className="sticky-note" style={{background: '#B2EBE0'}}>
+                    <h4>Pediatric Care</h4>
+                    <p>Specialized healthcare for children, ensuring a healthy start.</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1B529E"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
+                </div>
             </div>
         </div>
         <div id="about-section">
@@ -52,8 +62,8 @@ const Home = () => {
           </div>
           <div id="about-content">
             <p style={{color: '#04B794'}}>ABOUT US</p>
-            <h1 style={{fontFamily: 'Oswald'}}>Welcome To Stonebrook Medical Center</h1>
-            <p style={{color: '#606060', lineHeight: '35px', width: '55%'}}>Stonebrook Medical Center is dedicated to delivering exceptional healthcare for families and individuals. Our experienced team provides personalized family care and convenient walk-in services, ensuring quality medical support when you need it most.</p>
+            <h1 style={{fontFamily: 'Oswald', marginTop: "0"}}>Welcome To Stonebrook Medical Center</h1>
+            <p style={{color: '#606060', lineHeight: '35px'}}>Stonebrook Medical Center is dedicated to delivering exceptional healthcare for families and individuals. Our experienced team provides personalized family care and convenient walk-in services, ensuring quality medical support when you need it most.</p>
             <div className="about-bulletpoints">
               {[
                 ['Caring Medical Team', 'Comprehensive Family Care', 'Walk-In Clinic Convenience', 'Advanced Medical Facilities'],
@@ -107,13 +117,12 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div id="team-section">
+        {/* <div className="team-section">
           <p style={{color: '#04B794', textAlign: 'center', marginBottom: "0"}}>OUR TEAM</p>
           <h2 style={{fontFamily: 'Oswald', textAlign: 'center', marginBottom: '40px', marginTop: "0", fontSize: "48px"}}>Meet Our Expert Medical Team</h2>
           <div className="doctors-carousel" ref={carouselRef}>
             {[
               { image: docImg, name: 'Doctor Name', specialty: 'Specialty/Major' },
-              { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
@@ -125,7 +134,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         <Footer />
     </div>
   )

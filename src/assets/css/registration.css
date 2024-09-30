@@ -1,0 +1,222 @@
+.registration-form {
+    margin: 5%;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Increased from 10px */
+    width: 100%;
+    max-width: 600px; /* Added max-width for larger screens */
+}
+
+.registration-form label {
+    font-weight: 600; 
+}
+
+.registration-form input,
+.registration-form textarea {
+    width: 100%;
+    padding: 12px; /* Increased from 10px */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    margin: 10px 0; /* Added vertical margin */
+}
+
+.registration-form textarea {
+    resize: vertical;
+    min-height: 120px; /* Increased from 100px */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .registration-form {
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .registration-form label {
+        font-size: 18px;
+    }
+
+    .registration-form input::placeholder,
+    .registration-form textarea::placeholder {
+        font-size: 18px;
+    }
+
+    .registration-form input,
+    .registration-form textarea {
+        width: 100%;
+        font-size: 18px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        border: 2px solid #ccc;
+    }
+
+    .form-header {
+        margin-left: 3%;
+    }
+
+    .form-header h1 {
+        font-size: 36px;
+    }
+
+    .form-header p {
+        font-size: 18px;
+    }
+
+    .registration-form form {
+        width: 90%;
+        max-width: none;
+    }
+
+    .registration-form .book-appointment-button {
+        align-self: center;
+    }
+
+    .date-time-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .date-time-row > div {
+        width: 100%;
+    }
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .registration-form {
+        flex-direction: column;
+    }
+
+    .registration-form form {
+        width: 100%;
+    }
+
+    .date-time-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    
+    .form-header {
+        width: 85%;
+    }
+
+    .form-header h1 {
+        font-size: 30px;
+    }
+    .form-header p {
+        font-size: 15px;
+    }
+
+    .registration-form form {
+        gap: 10px;
+    }
+
+    .allergies-form {
+        margin-bottom: 20px;
+    }
+
+    .registration-form label {
+        font-size: 15px;
+    }
+
+    .registration-form input {
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+}
+
+
+
+/* For older browsers */
+.registration-form input::-webkit-input-placeholder,
+.registration-form textarea::-webkit-input-placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #999;
+}
+
+.registration-form input::-moz-placeholder,
+.registration-form textarea::-moz-placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #999;
+}
+
+.registration-form input:-ms-input-placeholder,
+.registration-form textarea:-ms-input-placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #999;
+}
+
+.date-time-row {
+    display: flex;
+    gap: 50px;
+}
+
+
+.allergies-form label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px; /* Space between the square and label */
+    white-space: nowrap;
+  }
+  
+  .allergies-form input[type="radio"] {
+    appearance: none; /* Remove default radio button styling */
+    width: 20px;
+    height: 20px;
+    border: 1px solid #292929; /* Blue border */
+    border-radius: 4px; /* Make it square */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .allergies-form input[type="radio"]:checked {
+    background-color: #1B529E; /* Blue background when checked */
+  }
+  
+  .allergies-form input[type="radio"]:checked::after {
+    content: ''; /* Create a pseudo-element for the tick */
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1B529E; /* Match background color */
+  }
+  .allergies-form input[type="radio"]:checked::after {
+    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='20px' viewBox='0 -960 960 960' width='20px' fill='000'><path d='M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z'/></svg>");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

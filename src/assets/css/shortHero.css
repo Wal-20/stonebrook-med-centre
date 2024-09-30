@@ -1,0 +1,121 @@
+.short-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.short-hero-header {
+    font-size: 26px;
+    text-align: center;
+    width: 50%;
+}
+
+.short-hero .sticky-note {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    margin: 0 140px;
+    box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.1);
+    border-radius: 20px;
+    max-width: 220px;
+}
+
+.short-hero.sticky-note h4 {
+    margin-bottom: 0;
+}
+
+.short-hero .sticky-note p {
+    max-width: 90%;
+}
+
+.short-hero .sticky-note svg {
+    align-self: flex-end;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+    box-sizing: content-box;
+}
+
+
+
+.gradient-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.left-gradient {
+    background: radial-gradient(circle at bottom left, rgba(4, 183, 148, 0.5) 0%, rgba(218, 245, 240, 0) 75%);
+    border-radius: 0 100% 0 0;
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 460 / 400;
+}
+
+.left-gradient .sticky-note {
+    margin-left: 20px;
+    min-width: 150px;
+}
+
+.right-gradient .sticky-note {
+    min-width: 150px;
+    margin-right: 20px;
+}
+
+.right-gradient {
+    background: radial-gradient(circle at bottom right, rgba(30, 168, 209, 0.5) 0%, rgba(30, 168, 209, 0) 75%);
+    border-radius: 100% 0 0 0;
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 560 / 500;
+    margin-left: auto; /* This pushes the element to the right */
+}
+
+
+@media (max-width: 1440px) {
+
+    .short-hero-header {
+        margin-bottom : 20px;
+    }
+    .short-hero-header h3 {
+        font-size: 20px;
+    }
+
+    .short-hero-header h1 {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 1024px) {
+    .left-gradient {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .gradient-background {
+        display: none;
+    }
+
+    .right-gradient {
+        max-width: 100%;
+        border-radius: 0;
+        margin-left: 0; /* Reset margin for full width on smaller screens */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .gradient-background {
+        padding: 1rem;
+    }
+
+    .short-hero-header {
+        font-size: 30px;
+        width: 80%;
+    }
+
+  
+}
+
+

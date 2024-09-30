@@ -2,7 +2,7 @@
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    /* width: 100%; */
     z-index: 1001;
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 4%;
     flex-grow: 1; /* Added to allow the links container to grow */
 }
 
