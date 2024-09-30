@@ -21,8 +21,9 @@
     max-width: 220px;
 }
 
-.short-hero.sticky-note h4 {
+.short-hero .sticky-note h4 {
     margin-bottom: 0;
+    font-size: 24px;
 }
 
 .short-hero .sticky-note p {
@@ -43,7 +44,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
 }
 
 .left-gradient {
@@ -86,6 +86,17 @@
     .short-hero-header h1 {
         margin-bottom: 20px;
     }
+
+    .short-hero .sticky-note h4 {
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+    
+    .short-hero .sticky-note p {
+        max-width: 90%;
+        font-size: 14px;
+    }
+
 }
 @media (max-width: 1024px) {
     .left-gradient {

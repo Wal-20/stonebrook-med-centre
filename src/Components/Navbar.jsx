@@ -83,14 +83,12 @@ const Navbar = ({ transparent = false }) => {
                 <svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/></svg>
                   Back
                   </div>
-                <div className='navbar-link' onClick={() => handleLinkClick("/services/house-renovation")}>House Renovation Services</div>
-                <div className='navbar-link' onClick={() => handleLinkClick("/services/closets-and-cabinets")}>Closets and Cabinets Services</div>
-                <div className='navbar-link' onClick={() => handleLinkClick("/services/gates-and-doors")}>Gates and Doors Services</div>
-                <div className='navbar-link' onClick={() => handleLinkClick("/services/fireplace")}>Fireplace Services</div>
-                <div className='navbar-link' onClick={() => handleLinkClick("/services/kitchens")}>Kitchens Services</div>
-                <div className='navbar-link' onClick={() => handleLinkClick("/services/stairs-and-rails")}>Stairs And Rails</div>
-                <div className='navbar-link' onClick={() => handleLinkClick("/services/decks-and-fences")}>Decks And Fences</div>
-                <div className='navbar-link' onClick={() => handleLinkClick("/services/bathrooms")}>Bathroom Services</div>
+                <div className='navbar-link'>Family Medicine</div>
+                <div className='navbar-link'>Preventative Care</div>
+                <div className='navbar-link'>Pediatric Care</div>
+                <div className='navbar-link'>Women's Health</div>
+                <div className='navbar-link'>Walk-In Clinic</div>
+                <div className='navbar-link'>Minor Procedures</div>
               </div>
             )}
           </>
@@ -99,14 +97,12 @@ const Navbar = ({ transparent = false }) => {
             Services
 
             <div className="dropdown-content">
-              <div onClick={() => handleLinkClick("/services/house-renovation")}>House Renovation Services</div>
-              <div onClick={() => handleLinkClick("/services/closets-and-cabinets")}>Closets and Cabinets Services</div>
-              <div onClick={() => handleLinkClick("/services/gates-and-doors")}>Gates and Doors Services</div>
-              <div onClick={() => handleLinkClick("/services/fireplace")}>Fireplace Services</div>
-              <div onClick={() => handleLinkClick("/services/kitchens")}>Kitchens Services</div>
-              <div onClick={() => handleLinkClick("/services/stairs-and-rails")}>Stairs And Rails</div>
-              <div onClick={() => handleLinkClick("/services/decks-and-fences")}>Decks And Fences</div>
-              <div onClick={() => handleLinkClick("/services/bathrooms")}>Bathroom Services</div>
+              <div>Family Medicine</div>
+                <div>Preventative Care</div>
+                <div>Pediatric Care</div>
+                <div>Women's Health</div>
+                <div>Walk-In Clinic</div>
+                <div>Minor Procedures</div>
             </div>
           </div>
         )}

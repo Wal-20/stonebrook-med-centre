@@ -13,6 +13,7 @@ import servicesImage4 from '../assets/images/service-img-4.png'
 import servicesImage5 from '../assets/images/service-img-5.png'
 import servicesImage6 from '../assets/images/service-img-6.png'
 import docImg from '../assets/images/doc-img.png'
+import docImg2 from '../assets/images/img 2 1.png'
 import docPlaceHolder from '../assets/images/doc-img-placeholder.png'
 
 const Home = () => {
@@ -32,16 +33,17 @@ const Home = () => {
             <div className="hero-content">
                 <h1 style={{fontFamily: 'Oswald'}}>Trusted Family Medical Care at Stonebrook Medical Center</h1>
                 <p >Family care and walk-in services. Convenient, compassionate, and reliable.</p>
-                <button>Book an Appointment</button>
+                <button onClick={() => window.location.href = '/book-appointment'}>Book an Appointment</button>
+
             </div>
             <div className="hero-image">
-                <div className="sticky-note" style={{background: '#B1D9F5'}}>
+                <div className="sticky-note" style={{background: '#B1D9F5', marginTop: '40%', borderRadius: '20px', padding: '10px'}}>
                     <h4>Pediatric Care</h4>
                     <p>Specialized healthcare for children, ensuring a healthy start.</p>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1B529E"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
                 </div>
                 <img src={heroImage} alt="Hero" />
-                <div className="sticky-note" style={{background: '#B2EBE0'}}>
+                <div className="sticky-note" style={{background: '#B2EBE0', marginBottom: '40%', borderRadius: '20px', padding: '10px'}}>
                     <h4>Pediatric Care</h4>
                     <p>Specialized healthcare for children, ensuring a healthy start.</p>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1B529E"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
@@ -81,7 +83,7 @@ const Home = () => {
                 </div>
               ))}
             </div>
-            <button>Book an Appointment</button>
+            <button onClick={() => window.location.href = '/book-appointment'}>Book an Appointment</button>
           </div>
         
         </div>
@@ -117,12 +119,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <div className="team-section">
+        <div className="team-section">
           <p style={{color: '#04B794', textAlign: 'center', marginBottom: "0"}}>OUR TEAM</p>
           <h2 style={{fontFamily: 'Oswald', textAlign: 'center', marginBottom: '40px', marginTop: "0", fontSize: "48px"}}>Meet Our Expert Medical Team</h2>
           <div className="doctors-carousel" ref={carouselRef}>
             {[
               { image: docImg, name: 'Doctor Name', specialty: 'Specialty/Major' },
+              { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
+              { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
@@ -134,7 +138,18 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div> */}
+        </div>
+        <div id="get-in-touch">
+          <img src={docImg2} id='get-in-touch-image' alt="Doctor" />
+          <div id='get-in-touch-content'>
+            <p>GET IN TOUCH</p>
+            <h1>Ready to Take the Next Step in Your Health Journey?</h1>
+            <span>
+              <button onClick={() => window.location.href = '/book-appointment'}>Book Appointment</button>
+              <button onClick={() => window.location.href = '/register'}>New Patient Form</button>
+            </span>
+          </div>
+        </div>
         <Footer />
     </div>
   )

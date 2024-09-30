@@ -60,12 +60,15 @@ const BookAppointment = () => {
                 <img src={appointmentImage3} alt="Appointment 3" />
             </div>
         </div>
-        {/* <div className="team-section" style={{background: "#E7F1FF"}}>
+        <div className="team-section" style={{background: "#E7F1FF"}}>
           <p style={{color: '#04B794', textAlign: 'center', marginBottom: "0"}}>OUR TEAM</p>
           <h2 style={{fontFamily: 'Oswald', textAlign: 'center', marginBottom: '40px', marginTop: "0", fontSize: "48px"}}>Meet Our Expert Medical Team</h2>
           <div className="doctors-carousel" ref={carouselRef}>
             {[
               { image: docImg, name: 'Doctor Name', specialty: 'Specialty/Major' },
+              { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
+              { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
+              { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
@@ -77,7 +80,7 @@ const BookAppointment = () => {
               </div>
             ))}
           </div>
-        </div> */}
+        </div>
         <Footer/>
     </div>
   )

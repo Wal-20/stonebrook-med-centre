@@ -66,17 +66,15 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-
-
 .team-section {
   padding-top: 50px;
 }
 
 .doctors-section {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   overflow-x: hidden;
-  padding: 0 20px; /* Reduced padding for smaller screens */
+  padding: 0 20px;
 }
 
 .doctors-carousel {
@@ -85,41 +83,47 @@ button:focus-visible {
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   gap: 20px;
-  padding: 20px 0;
-  max-width: 100%;
+  padding: 20px 0 30px;
+  width: 100%;
   margin: 0 auto;
-  justify-content: flex-start; /* Changed to flex-start for better alignment on smaller screens */
-  scroll-behavior: smooth; /* Enables smooth scrolling */
-  -webkit-overflow-scrolling: touch; /* For smoother mobile scrolling */
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
+/* Scrollbar styles for Firefox */
 .doctors-carousel::-webkit-scrollbar {
-  height: 8px;
-  justify-content: flex-start; /* This ensures items align to the start */
+  height: 6px;
+  background-color: transparent;
+}
 
+.doctors-carousel::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  margin: 0 20px; /* Add some space on the sides */
 }
 
 .doctors-carousel::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
 }
 
 .doctor-card {
   flex: 0 0 auto;
-  width: 100%; /* Changed to 100% for full width on small screens */
-  max-width: 262px; /* Added max-width to limit size on larger screens */
+  width: calc(100% - 40px);
+  max-width: 262px;
   text-align: center;
   border-radius: 8px;
   padding: 15px;
   display: inline-block;
-  scroll-snap-align: start; /* Makes each card snap to the start when scrolling */
-
+  scroll-snap-align: start;
 }
 
 .doctor-image {
   width: 100%;
-  max-width: 262px; /* Added max-width to limit image size */
-  height: auto; /* Changed to auto for responsive height */
-  max-height: 262px; /* Added max-height to maintain aspect ratio */
+  max-width: 262px;
+  height: auto;
+  max-height: 262px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
@@ -136,7 +140,6 @@ button:focus-visible {
   color: #666;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -150,17 +153,40 @@ button:focus-visible {
   }
 }
 
-/* Added media query for larger screens */
-@media (max-width: 768px) {
-  .doctors-section {
-    padding: 0 40px; /* Restore original padding for larger screens */
-  }
-
+@media (max-width: 1024px) {
   .doctors-carousel {
-    justify-content: center; /* Center cards on larger screens */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    white-space: normal;
   }
 
   .doctor-card {
-    width: 25%;
+    width: calc(50% - 20px);
+    scroll-snap-align: unset;
+  }
+
+  .doctor-image {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-image {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+/* Added media query for larger screens */
+@media (min-width: 768px) {
+  .doctors-section {
+    padding: 0 40px;
+  }
+
+  .doctor-card {
+    width: calc(25% - 15px);
   }
 }

@@ -40,6 +40,21 @@
 }
 
 
+@media (max-width: 1440px) {
+
+    .appointment-images {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 20px;
+    }
+
+    .appointment-images img {
+        object-fit: cover;
+    }
+}
+
+
 @media (max-width: 1024px) {
 
 
