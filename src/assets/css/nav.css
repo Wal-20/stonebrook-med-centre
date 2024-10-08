@@ -94,14 +94,24 @@
     background-color: #f1f1f1;
 }
 
+@media(max-width: 1024px) {
+    #logo {
+        max-width: 150px;
+        min-width: 150px;
+    }
+    .navbar-link {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 767px) {
     #navbar-main-container {
         padding: 15px;
     }
 
     #logo {
-        max-width: 90px;
-        min-width: 90px;
+        max-width: 140px;
+        min-width: 140px;
     }
 
     #navbar-links {

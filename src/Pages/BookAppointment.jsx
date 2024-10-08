@@ -31,18 +31,18 @@ const BookAppointment = () => {
         <div className="registration-form">
             <form>
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="enter patient's full name" required />
+                <input type="text" id="name" name="name" placeholder="Enter patient's full name" required />
 
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="enter your email" required />
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
                 <label htmlFor="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder='enter your phone number ' required />
+                <input type="tel" id="phone" name="phone" placeholder='Enter your phone number ' required />
 
                 <label htmlFor="healthConcern">Tell Us About Your Health Concern</label>
-                <textarea id="healthConcern" name="healthConcern" rows="10" placeholder='message'required></textarea>
+                <textarea id="healthConcern" name="healthConcern" rows="10" placeholder='Message'required></textarea>
 
-                <div className="date-time-row">
+                <div className="form-row">
                     <div>
                         <label htmlFor="date">Date</label>
                         <input type="date" id="date" name="date" placeholder='mm/dd/yyyy' required />

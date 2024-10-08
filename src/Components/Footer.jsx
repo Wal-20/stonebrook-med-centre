@@ -20,17 +20,17 @@ const Footer = () => {
             <h2 className="footer-section-title">Quick Links</h2>
             <a className='footer-subtext' href="/">Home</a>
             <a className='footer-subtext' href="/">Services</a>
-            <a className='footer-subtext' href="/gallery">New Patient Form</a>
+            <a className='footer-subtext' href="/register">New Patient Form</a>
             <a className='footer-subtext' href="/contact">Contact Us</a>
         </div>
         <div id="footer-services">
             <h2 className="footer-section-title">Services</h2>
-            <a className='footer-subtext' href="/services/house-renovation">Family Medicine</a>
-            <a className='footer-subtext' href="/services/closets-and-cabinets">Preventative Care</a>
-            <a className='footer-subtext' href="/services/gates-and-doors">Pediatric Care</a>
-            <a className='footer-subtext' href="/services/fireplace">Women's Health</a>
-            <a className='footer-subtext' href="/services/kitchens">Walk-In Clinic</a>
-            <a className='footer-subtext' href="/services/stairs-and-rails">Minor Procedures</a>
+            <a className='footer-subtext' href="/">Family Medicine</a>
+            <a className='footer-subtext' href="/">Preventative Care</a>
+            <a className='footer-subtext' href="/">Pediatric Care</a>
+            <a className='footer-subtext' href="/">Women's Health</a>
+            <a className='footer-subtext' href="/">Walk-In Clinic</a>
+            <a className='footer-subtext' href="/">Minor Procedures</a>
         </div>
         <div>
           <h2 className="footer-section-title">Business Hours</h2>

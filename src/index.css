@@ -65,6 +65,15 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(100, 108, 255, 0.3);
+}
+
+/* component specific styles */
 
 .team-section {
   padding-top: 50px;

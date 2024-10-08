@@ -6,6 +6,9 @@ import heroImage from '../assets/images/hero-image.png'
 import aboutImage1 from '../assets/images/about_1.png'
 import aboutImage2 from '../assets/images/about_2.png'
 import aboutImage3 from '../assets/images/about_3.png'
+import serviceDesc1 from '../assets/images/service-desc-1.png'
+import serviceDesc2 from '../assets/images/service-desc-2.png'
+import serviceDesc3 from '../assets/images/service-desc-3.png'
 import servicesImage1 from '../assets/images/service-img-1.png'
 import servicesImage2 from '../assets/images/service-img-2.png'
 import servicesImage3 from '../assets/images/service-img-3.png'
@@ -32,21 +35,22 @@ const Home = () => {
         <div className="hero-section">
             <div className="hero-content">
                 <h1 style={{fontFamily: 'Oswald'}}>Trusted Family Medical Care at Stonebrook Medical Center</h1>
-                <p >Family care and walk-in services. Convenient, compassionate, and reliable.</p>
+                <p>Family care and walk-in services. Convenient, compassionate, and reliable.</p>
                 <button onClick={() => window.location.href = '/book-appointment'}>Book an Appointment</button>
+                <h2 style={{fontFamily: 'Oswald'}}>Coming Soon: January 2025</h2>
 
             </div>
             <div className="hero-image">
-                <div className="sticky-note" style={{background: '#B1D9F5', marginTop: '40%', borderRadius: '20px', padding: '10px'}}>
+                <div className="sticky-note" style={{background: '#B1D9F5', borderRadius: '20px', padding: '10px'}}>
                     <h4>Family Practice</h4>
                     <p>Comprehensive care for all ages, from kids to seniors.</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1B529E"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1B529E"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
                 </div>
                 <img src={heroImage} alt="Hero" />
-                <div className="sticky-note" style={{background: '#B2EBE0', marginBottom: '40%', borderRadius: '20px', padding: '10px'}}>
+                <div className="sticky-note" style={{background: '#B2EBE0', borderRadius: '20px', padding: '10px'}}>
                     <h4>Walk-In Clinic</h4>
                     <p>No appointment needed. Immediate care for urgent needs.</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1B529E"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#04B794"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
                 </div>
             </div>
         </div>
@@ -71,7 +75,7 @@ const Home = () => {
                 ['Caring Medical Team', 'Comprehensive Family Care', 'Walk-In Clinic Convenience', 'Advanced Medical Facilities'],
                 ['Personalized Treatment Plans', 'Accessible Location', 'Patient-Centered Approach', 'Flexible Appointment Scheduling']
               ].map((column, columnIndex) => (
-                <div key={columnIndex} className="bulletpoint-column">
+                <div key={columnIndex} className="bulletpoint-column">home
                   {column.map((point, pointIndex) => (
                     <div key={pointIndex} className="bulletpoint">
                       <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
@@ -87,36 +91,64 @@ const Home = () => {
           </div>
         
         </div>
+        <div id="service-description">
+          <div className="sticky-note" style={{background: '#04B794', borderRadius: '20px'}}>
+              <span>
+                <img src={serviceDesc1} alt="Service Description 1" />
+                <h3 style={{fontFamily: 'Oswald', fontWeight: '400'}}>New Physicians, New Approach</h3>
+              </span>
+              <p>Our experienced team of healthcare professionals is here to support your health and wellness needs. Whether you're seeking a family doctor for ongoing care or need a specialist referral, we're here to help.</p>
+          </div>
+          <div className="sticky-note" style={{background: '#1B529E', borderRadius: '20px'}}>
+              <span>
+              <img src={serviceDesc2} alt="Service Description 2" />
+              <h3 style={{fontFamily: 'Oswald', fontWeight: '400'}}>Accepting New Patients</h3>
+              </span>
+              <p>We are currently accepting new patients! Our friendly staff is ready to assist you with the registration process. Visit us, check our hours, and get started on your path to better health.</p>
+          </div>
+          <div className="sticky-note" style={{background: '#04B794', borderRadius: '20px'}}>
+              <span>
+                <img src={serviceDesc3} alt="Service Description 3" />
+                <h3 style={{fontFamily: 'Oswald', fontWeight: '400'}}>Hours of Operation</h3>
+              </span>
+              <span style={{display: 'flex', flexDirection: 'column', gap: '1px', alignItems: 'flex-start'}}>
+                <p style={{margin: '0'}}>Monday to Friday: 9:00 AM - 6:00 PM</p>
+                <p style={{margin: '0'}}>Saturday: 10:00 AM - 2:00 PM</p>
+                <p style={{margin: '0'}}>Sunday: Closed</p>
+              </span>
+          </div>
+        </div>
         <div id="services-section">
           <p style={{color: '#04B794', textAlign: 'center', marginBottom: "0"}}>WHAT WE PROVIDE</p>
           <h2 style={{fontFamily: 'Oswald', textAlign: 'center', marginBottom: '40px', marginTop: "0", fontSize: "48px"}}>Comprehensive Healthcare for Every Need</h2>
           <div className="services-grid">
             <div className="services-row">
               {[
-                { image: servicesImage1, title: 'Family Medicine', description: 'Comprehensive care for all ages, from newborns to seniors.' },
-                { image: servicesImage2, title: 'Chronic Disease Management', description: 'Expert support for managing conditions like diabetes, hypertension, and asthma.' },
-                { image: servicesImage3, title: 'Pediatric Care', description: 'Specialized care for infants, children, and adolescents.' },
+                { image: servicesImage1, title: 'Walk-In Clinic'},
+                { image: servicesImage2, title: 'Smoking Cessation'},
+                { image: servicesImage3, title: 'PAP Tests'},
               ].map((service, index) => (
                 <div key={index} className="service-card">
                   <img src={service.image} alt={service.title} className="service-image" />
                   <h2>{service.title}</h2>
-                  <p>{service.description}</p>
                 </div>
               ))}
             </div>
             <div className="services-row">
               {[
-                { image: servicesImage4, title: 'Women\'s Health', description: 'Routine exams, prenatal care, and other women\'s health services.' },
-                { image: servicesImage5, title: 'Walk-In Clinic', description: 'Immediate care for minor injuries, illnesses, and urgent health needs.' },
-                { image: servicesImage6, title: 'Minor Procedures', description: 'In-house procedures like stitches, wound care, and more.' }
+                { image: servicesImage4, title: 'Specialist Referrals' },
+                { image: servicesImage5, title: 'Prenatal Care' },
+                { image: servicesImage6, title: 'Hypertension Management'}
               ].map((service, index) => (
                 <div key={index} className="service-card">
                   <img src={service.image} alt={service.title} className="service-image" />
                   <h2>{service.title}</h2>
-                  <p>{service.description}</p>
                 </div>
               ))}
             </div>
+          </div>
+          <div className="book-appointment-button-container">
+            <button className="book-appointment-button" onClick={() => window.location.href = '/services'}>Explore All Services</button>
           </div>
         </div>
         <div className="team-section">
