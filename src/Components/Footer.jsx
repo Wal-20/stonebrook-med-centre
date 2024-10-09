@@ -1,6 +1,5 @@
 import React from 'react'
 import '../assets/css/footer.css'
-import bg from '../assets/images/group.png'
 import fbLogo from '../assets/images/uil_facebook.png'
 import igLogo from '../assets/images/ri_instagram-fill.png'
 import twitterLogo from '../assets/images/Vector.png'
