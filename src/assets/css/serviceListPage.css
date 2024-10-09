@@ -1,0 +1,70 @@
+#service-page-container h1{
+    margin-left: 5%;
+    margin-bottom: 50px;
+}
+
+.service-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.service-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: calc(33.33% - 20px); /* 3 cards per row, accounting for gap */
+    max-width: 300px;
+  }
+  
+.service-card:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.service-image {
+    height: 100%; /* Reduced height */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 21px;
+  }
+
+  .service-card {
+    width: 50%;
+    padding: 15px;
+}
+
+
+
+.service-card-container .service-card {
+    background-color: #efefef;
+    min-width: 25%;
+}
+
+
+@media (max-width: 768px) {
+    .service-card-container .service-card {
+        width: 80%;
+    }
+
+    .service-card-container h1 {
+        text-align: center;
+    }
+}

@@ -8,29 +8,24 @@ import linkedInLogo from '../assets/images/akar-icons_linkedin-box-fill.png'
 
 const Footer = () => {
   return (
-    <div id='footer-container' style={{
-      backgroundImage: `url(${bg})`,
-      backgroundSize: 'contain',
-      backgroundPosition: '5% center', // Adjusted to push the background slightly to the right
-      backgroundRepeat: 'no-repeat'
-    }}>
+    <div id='footer-container'>
       <div id='footer-content'>
         
         <div id="footer-links">
             <h2 className="footer-section-title">Quick Links</h2>
             <a className='footer-subtext' href="/">Home</a>
-            <a className='footer-subtext' href="/">Services</a>
+            <a className='footer-subtext' href="/services">Services</a>
             <a className='footer-subtext' href="/register">New Patient Form</a>
-            <a className='footer-subtext' href="/contact">Contact Us</a>
+            <a className='footer-subtext'>Contact Us</a>
         </div>
         <div id="footer-services">
             <h2 className="footer-section-title">Services</h2>
-            <a className='footer-subtext' href="/">Family Medicine</a>
-            <a className='footer-subtext' href="/">Preventative Care</a>
-            <a className='footer-subtext' href="/">Pediatric Care</a>
-            <a className='footer-subtext' href="/">Women's Health</a>
-            <a className='footer-subtext' href="/">Walk-In Clinic</a>
-            <a className='footer-subtext' href="/">Minor Procedures</a>
+            <a className='footer-subtext'>Family Medicine</a>
+            <a className='footer-subtext'>Preventative Care</a>
+            <a className='footer-subtext'>Pediatric Care</a>
+            <a className='footer-subtext'>Women's Health</a>
+            <a className='footer-subtext'>Walk-In Clinic</a>
+            <a className='footer-subtext'>Minor Procedures</a>
         </div>
         <div>
           <h2 className="footer-section-title">Business Hours</h2>

@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
+    margin-bottom: 100px;
 }
 
 .short-hero-header {
@@ -80,7 +81,7 @@
         margin-bottom : 20px;
     }
     .short-hero-header h3 {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .short-hero-header h1 {
@@ -99,21 +100,52 @@
 
 }
 @media (max-width: 1024px) {
-    .left-gradient {
-        max-width: 100%;
-        border-radius: 0;
+    .short-hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .short-hero-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 26px;
+        text-align: center;
+        width: 100%;
+        order: -1; /* Ensures the header always comes first */
+    }
+
+    .short-hero-header h3 {
+        width: 80%;
     }
 
     .gradient-background {
-        display: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        background: none;
     }
 
+    .left-gradient,
     .right-gradient {
+        background: none;
         max-width: 100%;
         border-radius: 0;
-        margin-left: 0; /* Reset margin for full width on smaller screens */
+        margin: 0;
+        width: auto;
     }
 
+    .short-hero .sticky-note {
+        display: flex;
+        margin: 0;
+        max-width: 200px; /* Maintain max-width from larger screens */
+    }
 }
 
 @media (max-width: 480px) {
@@ -126,6 +158,18 @@
         width: 80%;
     }
 
+    .short-hero-header h1 {
+        font-size: 70px;
+    }
+    
+
+    .short-hero-header h3 {
+        font-size: 18px;
+    }
+
+    .short-hero .sticky-note {
+        max-width: 200px; /* Maintain max-width from larger screens */
+    }
   
 }
 

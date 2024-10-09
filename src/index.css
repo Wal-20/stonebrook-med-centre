@@ -183,13 +183,17 @@ select:focus {
 }
 
 @media (max-width: 768px) {
+
+  .doctor-card {
+    width: 30%;
+  }
+
   .doctor-image {
     max-width: 150px;
     max-height: 150px;
   }
 }
 
-/* Added media query for larger screens */
 @media (min-width: 768px) {
   .doctors-section {
     padding: 0 40px;
@@ -198,4 +202,5 @@ select:focus {
   .doctor-card {
     width: calc(25% - 15px);
   }
+  
 }

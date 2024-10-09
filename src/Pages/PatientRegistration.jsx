@@ -32,7 +32,7 @@ const PatientRegistration = () => {
                 <input type="date" id="date" name="date" placeholder='mm/dd/yyyy' required />
 
                 <div className="radio-options">
-                <label style={{ margin: "10px 0", alignSelf: "center"}}>Gender: </label>
+                <label style={{ margin: "10px 0",}}>Gender: </label>
                   <label style={{ display: 'flex', alignItems: 'center' }}>
                     <input type="radio" name="gender" value="male" style={{ marginRight: '5px' }} />
                     Male

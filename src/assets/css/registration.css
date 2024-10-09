@@ -147,6 +147,10 @@
     }
 
 
+    .radio-options {
+        flex-direction: column;
+    }
+
 
     .registration-form input,
     .registration-form textarea {
@@ -205,6 +209,7 @@
         flex-direction: column;
         gap: 20px;
     }
+
 }
 
 

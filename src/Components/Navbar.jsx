@@ -72,43 +72,12 @@ const Navbar = ({ transparent = false }) => {
       )}
       <div id="navbar-links" className={isOpen ? 'show' : ''}>
         <div className='navbar-link' style={{color: transparent && !isMobile ? 'white' : 'black'}} onClick={() => handleLinkClick("/")}>Home</div>
-        {isMobile ? (
-          <>
-            <div className='navbar-link' onClick={toggleServiceOptions}>
-              Services
-            </div>
-            {showServiceOptions && (
-              <div ref={serviceOptionsRef} className={`mobile-service-options slide-${animationDirection}`}>
-                <div className='navbar-link back-button' onClick={toggleServiceOptions}>
-                <svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/></svg>
-                  Back
-                  </div>
-                <div className='navbar-link'>Family Medicine</div>
-                <div className='navbar-link'>Preventative Care</div>
-                <div className='navbar-link'>Pediatric Care</div>
-                <div className='navbar-link'>Women's Health</div>
-                <div className='navbar-link'>Walk-In Clinic</div>
-                <div className='navbar-link'>Minor Procedures</div>
-              </div>
-            )}
-          </>
-        ) : (
-          <div className="navbar-link services-dropdown" style={{color: transparent && !isMobile ? 'white' : 'black'}}>
+          <div className="navbar-link" onClick={() => handleLinkClick("/services")} style={{color: transparent && !isMobile ? 'white' : 'black'}}>
             Services
-
-            <div className="dropdown-content">
-              <div>Family Medicine</div>
-                <div>Preventative Care</div>
-                <div>Pediatric Care</div>
-                <div>Women's Health</div>
-                <div>Walk-In Clinic</div>
-                <div>Minor Procedures</div>
-            </div>
           </div>
-        )}
         <div className='navbar-link' style={{color: transparent && !isMobile ? 'white' : 'black'}} onClick={() => handleLinkClick("/register")}>New Patient Form</div>
 
-        <div className='navbar-link' style={{color: transparent && !isMobile ? 'white' : 'black'}} onClick={() => handleLinkClick("/contact")}>Contact Us</div>
+        <div className='navbar-link' style={{color: transparent && !isMobile ? 'white' : 'black'}}>Contact Us</div>
         <div className='navbar-link' style={{
           color: 'white',
           backgroundColor: '#292929',

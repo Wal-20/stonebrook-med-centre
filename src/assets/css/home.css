@@ -3,10 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
-
     position: relative;
-    /* overflow: hidden; */
-    /* padding-left: 5%; */
 }
 
 .hero-content {
@@ -180,52 +177,6 @@
   padding: 50px 0;
 }
 
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.services-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.service-card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0;
-  transition: box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: calc(33.33% - 20px); /* 3 cards per row, accounting for gap */
-  max-width: 300px;
-}
-
-.service-card:hover {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
-}
-
-.service-image {
-  height: 100%; /* Reduced height */
-  width: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.service-card h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 21px;
-}
 
 .book-appointment-button-container {
   display: flex;
@@ -293,13 +244,6 @@
   color: #04B794;
 }
 
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  }
-
-  .service-card {
-    width: calc(33.33% - 20px); /* 3 cards per row */
-  }
 
 
 @media(min-width: 1300px) {
@@ -473,27 +417,6 @@
     }
     
 
-    .services-row {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .service-card {
-        width: 50%;
-        padding: 15px;
-    }
-
-    .service-card h2 {
-      width: 100%;
-      font-size: 18px;
-      margin: 8px 0;
-    }
-
-    .service-card p {
-        font-size: 14px;
-    }
-
 }
 
 /* Mobile styles */
@@ -558,11 +481,17 @@
   }
 
   .hero-image .sticky-note {
-    width: 35%;
+    width: 100%;
     height: auto;
     max-width: 200px; /* Limit maximum width */
     border-radius: 20px;
     padding: 10px;
+    margin-bottom: 10px; /* Add space between sticky notes */
+  }
+
+  .hero-image {
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-image .sticky-note h4 {
@@ -591,21 +520,6 @@
     gap: 10px;
   }
 
-  .service-card {
-    width: calc(50% - 15px); /* 2 cards per row, accounting for gap */
-  }
-
-  .service-image {
-    height: 160px; /* Further reduce image height for mobile */
-  }
-
-  .service-card h2 {
-    font-size: 20px;
-  }
-
-  .service-card p {
-    font-size: 12px;
-  }
 }
 
 /* Small mobile styles */
@@ -654,21 +568,6 @@
   #service-description .sticky-note:last-child {
     max-width: 70%;
     min-width: 70%;
-  }
-
-  .service-card {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-
-  .service-card * {
-    width: 80%;
-  }
-
-  .service-image {
-    height: 180px; /* Slightly larger image for full-width cards */
-    width: 100%;
   }
 
   #get-in-touch-content p {

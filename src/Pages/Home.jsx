@@ -20,14 +20,6 @@ import docImg2 from '../assets/images/img 2 1.png'
 import docPlaceHolder from '../assets/images/doc-img-placeholder.png'
 
 const Home = () => {
-  const carouselRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (carouselRef.current) {
-      const scrollAmount = direction === 'left' ? -200 : 200;
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
 
   return (
     <div >
@@ -121,32 +113,21 @@ const Home = () => {
         <div id="services-section">
           <p style={{color: '#04B794', textAlign: 'center', marginBottom: "0"}}>WHAT WE PROVIDE</p>
           <h2 style={{fontFamily: 'Oswald', textAlign: 'center', marginBottom: '40px', marginTop: "0", fontSize: "48px"}}>Comprehensive Healthcare for Every Need</h2>
-          <div className="services-grid">
-            <div className="services-row">
-              {[
+          <div className='service-card-container'>
+        {[
                 { image: servicesImage1, title: 'Walk-In Clinic'},
                 { image: servicesImage2, title: 'Smoking Cessation'},
                 { image: servicesImage3, title: 'PAP Tests'},
-              ].map((service, index) => (
-                <div key={index} className="service-card">
-                  <img src={service.image} alt={service.title} className="service-image" />
-                  <h2>{service.title}</h2>
-                </div>
-              ))}
-            </div>
-            <div className="services-row">
-              {[
                 { image: servicesImage4, title: 'Specialist Referrals' },
                 { image: servicesImage5, title: 'Prenatal Care' },
-                { image: servicesImage6, title: 'Hypertension Management'}
+                { image: servicesImage6, title: 'Hypertension Management'}, 
               ].map((service, index) => (
                 <div key={index} className="service-card">
                   <img src={service.image} alt={service.title} className="service-image" />
                   <h2>{service.title}</h2>
                 </div>
               ))}
-            </div>
-          </div>
+        </div>
           <div className="book-appointment-button-container">
             <button className="book-appointment-button" onClick={() => window.location.href = '/services'}>Explore All Services</button>
           </div>
@@ -154,7 +135,7 @@ const Home = () => {
         <div className="team-section">
           <p style={{color: '#04B794', textAlign: 'center', marginBottom: "0"}}>OUR TEAM</p>
           <h2 style={{fontFamily: 'Oswald', textAlign: 'center', marginBottom: '40px', marginTop: "0", fontSize: "48px"}}>Meet Our Expert Medical Team</h2>
-          <div className="doctors-carousel" ref={carouselRef}>
+          <div className="doctors-carousel">
             {[
               { image: docImg, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },
