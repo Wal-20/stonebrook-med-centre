@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import '../assets/css/appointment.css'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
@@ -12,14 +12,6 @@ import docPlaceHolder from '../assets/images/doc-img-placeholder.png'
 
 const BookAppointment = () => {
 
-  const carouselRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (carouselRef.current) {
-      const scrollAmount = direction === 'left' ? -200 : 200;
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
   return (
     <div>
         <Navbar/>
@@ -63,7 +55,7 @@ const BookAppointment = () => {
         <div className="team-section" style={{background: "#E7F1FF"}}>
           <p style={{color: '#04B794', textAlign: 'center', marginBottom: "0"}}>OUR TEAM</p>
           <h2 style={{fontFamily: 'Oswald', textAlign: 'center', marginBottom: '40px', marginTop: "0", fontSize: "48px"}}>Meet Our Expert Medical Team</h2>
-          <div className="doctors-carousel" ref={carouselRef}>
+          <div className="doctors-carousel" >
             {[
               { image: docImg, name: 'Doctor Name', specialty: 'Specialty/Major' },
               { image: docPlaceHolder, name: 'Doctor Name', specialty: 'Specialty/Major' },

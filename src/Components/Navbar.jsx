@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../assets/css/nav.css'
 import logoImage from '../assets/images/main-logo.png'
 
 const Navbar = ({ transparent = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [showServiceOptions, setShowServiceOptions] = useState(false);
   const [animationDirection, setAnimationDirection] = useState('in');
-  const serviceOptionsRef = useRef(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -17,17 +15,10 @@ const Navbar = ({ transparent = false }) => {
     checkMobile();
     window.addEventListener('resize', checkMobile);
 
-    const handleClickOutside = (event) => {
-      if (serviceOptionsRef.current && !serviceOptionsRef.current.contains(event.target)) {
-        setShowServiceOptions(false);
-      }
-    };
 
-    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
       window.removeEventListener('resize', checkMobile);
-      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -44,17 +35,6 @@ const Navbar = ({ transparent = false }) => {
     }
   };
 
-  const toggleServiceOptions = () => {
-    if (showServiceOptions) {
-      setAnimationDirection('out');
-      setTimeout(() => {
-        setShowServiceOptions(false);
-        setAnimationDirection('in');
-      }, 300); // Match this with your animation duration
-    } else {
-      setShowServiceOptions(true);
-    }
-  };
 
   return (
     <div id="navbar-main-container" className={transparent ? 'transparent' : ''}>

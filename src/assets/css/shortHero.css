@@ -153,6 +153,9 @@
         padding: 1rem;
     }
 
+    .short-hero {
+        gap: 10px;
+    }
     .short-hero-header {
         font-size: 30px;
         width: 80%;
@@ -160,11 +163,13 @@
 
     .short-hero-header h1 {
         font-size: 70px;
+        margin-bottom: 0;
     }
     
 
     .short-hero-header h3 {
         font-size: 18px;
+        width: 100%;
     }
 
     .short-hero .sticky-note {

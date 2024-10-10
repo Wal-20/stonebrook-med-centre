@@ -29,8 +29,6 @@ const Home = () => {
                 <h1 style={{fontFamily: 'Oswald'}}>Trusted Family Medical Care at Stonebrook Medical Center</h1>
                 <p>Family care and walk-in services. Convenient, compassionate, and reliable.</p>
                 <button onClick={() => window.location.href = '/book-appointment'}>Book an Appointment</button>
-                <h2 style={{fontFamily: 'Oswald'}}>Coming Soon: January 2025</h2>
-
             </div>
             <div className="hero-image">
                 <div className="sticky-note" style={{background: '#B1D9F5', borderRadius: '20px', padding: '10px'}}>
@@ -46,6 +44,8 @@ const Home = () => {
                 </div>
             </div>
         </div>
+      <h1 id="coming-soon" style={{fontFamily: 'Oswald'}}>Coming Soon: January 2025</h1>
+
         <div id="about-section">
           <div id="about-images">
             <div className="about-images-container">

@@ -33,7 +33,7 @@ const Services = () => {
     <div id='service-page-container'>
         <Navbar/>
         <ShortHero header={"Our Services"} subtext={"At Stonebrook Medical Centre, we provide a comprehensive range of healthcare services to meet your needs"}/>
-        <h1 style={{fontFamily: "Oswald"}}>Explore Our Specialized Services</h1>
+        <h1 style={{fontFamily: "Oswald", marginLeft: "4%"}}>Explore Our Specialized Services</h1>
         <div className='service-card-container'>
         {[
                 { image: servicesImage1, title: 'Walk-In Clinic'},
